@@ -1,0 +1,623 @@
+/**************** Importing Google Fonts *****************/
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+/**************** Importing Google Fonts *****************/
+
+body {
+  font-family: 'Muli', sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  background: #FAFBFC;
+}
+
+/* CSS for Header Begins*/
+
+header {
+  box-shadow: 0 0 10px 0 #E0E0E0;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 9;
+}
+
+header nav,
+header nav section {
+  display: flex;
+}
+
+header nav {
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+header nav .header-selector {
+  justify-content: space-between;
+  width: 18%;
+}
+
+header nav,
+header nav .header-selections {
+  align-items: center;
+}
+
+.header-selections {
+  padding: 15px 0;
+}
+
+header nav .header-selections a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* .active {
+  border-bottom: 5px solid #8DD3BB;
+} */
+
+.favourite {
+  border-right: 2px solid #000;
+  padding-right: 15px;
+}
+
+.amenities h3,
+.reviews_heading h3,
+.loaction_heading h3,
+.available_rooms h3,
+.Overview h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.header-selections a:active, .header-selections a:hover {
+  border-bottom: 5px solid #8DD3BB;
+}
+
+/* CSS for Header Ends*/
+
+/**********************CSS for Main Section Begins**************************/
+
+.main-section {
+  padding: 70px 60px 0;
+}
+
+.main-section .breadcrumb ul {
+  width: 27%;
+  font-size: 14px;
+  padding: 40px 0;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.main-section .breadcrumb ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #757F76;
+}
+
+.main-section .breadcrumb ul li a.prev_breadcrumb {
+  color: #FF8682;
+  font-weight: 500;
+}
+
+.main-section .breadcrumb ul li a.prev_breadcrumb::after {
+  content: "";
+  border: solid #757F76;
+  margin-left: 7px;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.stay_heading,
+.stay_heading sup,
+.stay_sub_block p,
+.stay_information {
+  display: flex;
+}
+
+.stay_heading sup,
+.stay_sub_block p {
+  align-items: center;
+}
+
+.stay_heading sup img {
+  width: 40%;
+}
+
+.stay_sub_block p,
+.stay_sub_block h2 {
+  margin: 0;
+}
+
+.stay_sub_block p img {
+  width: 25px;
+}
+
+.hotel_location {
+  font-size: 12px;
+  font-weight: 600;
+  color: #757F76;
+}
+
+.review-wrapper p span {
+  color: #757F76;
+  font-weight: bold;
+}
+
+.hotel_review {
+  font-size: 10px;
+  font-weight: 600;
+  color: #757F76;
+}
+
+.hotel_review span,
+.favourites,
+.share {
+  padding: 10px;
+  border: 2px solid #8DD3BB;
+  margin: 2px 5px 2px 0;
+  font-weight: 800;
+  background: none;
+  border-radius: 5px;
+}
+
+.stay_control_buttons {
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.stay_sub_block .theme_Or {
+  text-align: right;
+  font-weight: bolder;
+}
+
+.stay_sub_block .theme_Or span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.stay_control_buttons .favourites {
+  padding: 10px 12px;
+  margin: 0 5px;
+}
+
+.stay_control_buttons .share {
+  padding: 8px 12px;
+  margin: 0 10px 0 5px;
+}
+
+.hotel_review b {
+  margin-right: 3px;
+  color: #000;
+  font-weight: bold;
+}
+
+.hotel_review span b {
+  margin-right: 0;
+}
+
+.stay_heading sup {
+  font-weight: 600;
+  font-size: 10px;
+  margin-left: 8px;
+  color: #757F76;
+}
+
+.stay_heading h2,
+.stay_sub_block .theme_Or {
+  font-size: 30px;
+}
+
+.stay_images {
+  margin: 15px 0 60px 0;
+}
+
+.view_photos {
+  float: right;
+  position: absolute;
+  bottom: -8%;
+  right: 7%;
+  cursor: pointer;
+}
+
+.stay_information {
+  justify-content: space-between;
+}
+
+/*Flex box CSS for Stay Images section*/
+
+/* .stay_images {
+  display: flex;
+  cursor: pointer;
+}
+
+.stay_images .wrap img {
+  width: 49%;
+}
+
+.stay_images .main-image {
+  width: 70%;
+  margin: 0 3px 3px 0;
+  border-radius: 20px 0 0 20px;
+} */
+
+.stay_images {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.stay_images img {
+  flex: 0 0 47.5%; /*Using Flex grow, fles shrink and flex basis*/
+}
+/*Flex box CSS for Stay Images section*/
+
+.border-element {
+  border-radius: 0 20px 0 0;
+}
+
+.border-element1 {
+  border-radius: 0 0 20px 0;
+}
+
+/*Styling global components Begins*/
+
+button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 20px;
+  border: none;
+  background: #8DD3BB;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*Global Horizontal line*/
+
+hr {
+  color: #F8F8F8;
+  border-top-style: outset;
+}
+
+/*Global Horizontal line*/
+
+.theme_Or {
+  color: #FF8682;
+  cursor: pointer;
+}
+
+.location,
+.amenities,
+.reviews,
+.available_rooms,
+.Overview {
+  margin: 60px 0;
+}
+
+/*CSS for Overview components Begins*/
+
+.Overview_content,
+.overview_block p {
+  color: #757F76;
+  font-weight: 600;
+}
+
+.overview_block p {
+  margin-bottom: 0;
+}
+
+.overview_block.overview_block_main p {
+  color: #000;
+}
+
+.overview_block.overview_block_main p span {
+  font-size: 12px;
+}
+
+.overview_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  border: 2px solid #8DD3BB;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.overview_block.overview_block_main h2 {
+  margin: 0;
+}
+
+.overview_block_main {
+  background: #8DD3BB;
+}
+
+.reviews_rating_type p {
+  font-size: 19px;
+}
+
+.reviews_rating_type p.verified-rating {
+  color: #757F76;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*CSS for Overview block Begins*/
+
+/* CSS for Available rooms Begins */
+
+.available_rooms_price span {
+  font-size: 12px;
+}
+
+/* .available_room_listing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/*Use of grid layout for available room section*/
+.available_room_listing {
+  display: inline-grid;
+  grid-template-columns: 40px 960px 200px 170px;
+  align-items: center;
+  gap: 10px;
+}
+
+.available_rooms_content {
+  font-weight: bold;
+  color: #757F76;
+  /* width: 70%; */
+}
+
+.available_rooms_content,
+.available_rooms_price {
+  margin: 0;
+}
+
+.available_rooms_price {
+  font-size: 24px;
+}
+
+.overview_main_block {
+  display: grid;
+  grid-template-columns: repeat(5,10%);
+  grid-template-rows: repeat(5, 100%);
+  grid-column-gap: 10px;
+}
+
+/*Use of grid layout for available room section*/
+
+
+/* .available_rooms_price,
+.available_room_listing button {
+  width: 10%;
+} */
+
+/* CSS for Available rooms Ends */
+
+/*CSS location section Begins*/
+.location_body {
+  width: 100%;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+
+.map {
+  width: 100%;
+  border-radius: 20px;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+
+/*CSS location section Ends*/
+
+/* CSS Amenities section Begins */
+/* .amenities .amenities-wrapper, */
+/* .amenities_listing div {
+  display: flex;
+  flex-direction: row;
+} */
+
+.amenities-wrapper div img {
+  width: 25px;
+  height: 25px;
+}
+
+.amenities-wrapper div p {
+  font-weight: bold;
+}
+
+/* .amenities_listing {
+  width: 40%;
+} */
+
+.amenities-wrapper div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.amenities-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 260px;
+  width: 60%;
+  /* gap: 5px; */
+}
+
+/* CSS Amenities section ends */
+
+/* CSS Reviews section Begins */
+.reviews_heading,
+.loaction_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.reviews_rating {
+  display: flex;
+  align-items: center;
+
+}
+
+.reviews_rating_type p,
+.reviews_rating h2 {
+  margin: 5px;
+}
+
+.reviews_rating h2 {
+  font-size: 42px;
+}
+
+.reviews_rating {
+  font-size: 14px;
+}
+
+.reviews_comments .review-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews_comments .review-wrapper .review_profile {
+  margin: 10px 10px 10px 0;
+}
+
+.review_flag {
+  margin: 5px 0 5px 30px;
+}
+
+button.previous,
+button.next {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.review_count {
+  display: flex;
+  justify-content: center;
+}
+
+.review_count p {
+  margin: 10px 40px;
+}
+
+.reviews {
+  padding-bottom: 5%;
+}
+
+/* CSS Reviews section Ends */
+
+/*CSS Subscribe Newsletter Begins*/
+
+.subscribe_newsletter {
+  border-radius: 20px;
+  background: url("/images/subscribe_background.png") #CDEAE1 no-repeat right;
+  width: 80%;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.subscribe_newsletter h2 {
+  font-size: 36px;
+  margin: 5px 0;
+  font-family: sans-serif;
+
+}
+
+.subscribe_newsletter form input, .subscribe_newsletter form input:focus-visible{
+  border: none;
+  width: 33%;
+  padding: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+#sub_info {
+  color: #757F76;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#sub_travel {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+input::placeholder {
+  color: #757F76;
+  font-size: 16px;
+}
+
+.subscribe_newsletter p {
+  margin: 10px 0;
+}
+
+.subscribe_newsletter form button {
+  padding: 15px;
+  background: #000;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 10px;
+}
+
+/*CSS Subscribe Newsletter Begins*/
+
+/**********************CSS for Main Section Ends**************************/
+
+
+/* Footer CSS begins*/
+footer {
+  margin-top: 12%;
+  padding: 80px 60px;
+  background: #8DD3BB;
+  display: flex;
+  padding: 200px 0 60px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+footer ul,
+footer h4,
+footer p,
+footer a {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+footer ul li {
+  margin-bottom: 20px;
+}
+
+.footer_listing img {
+  cursor: pointer;
+
+}
+
+/* footer CSS Ends*/

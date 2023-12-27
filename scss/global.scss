@@ -1,0 +1,79 @@
+/**********************SCSS for Global components Begins**************************/
+
+//Declaration of SCSS variables*
+$theme_1: #000;
+$theme_2: #FAFBFC;
+$theme_3: #E0E0E0;
+$theme_4: #fff;
+$theme_5: #757F76;
+$theme_6: #FF8682;
+$theme_7: #F8F8F8;
+$theme_8: #8DD3BB;
+$global_border: 2px solid $theme_8;
+$page_border: 60px 0;
+
+
+//Declaring Mixins
+
+@mixin flex_box {
+  display: flex;
+  align-items: center;
+}
+
+@mixin body_width {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+
+@mixin footer_box {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: $theme_1;
+}
+
+@mixin heading {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+//Declaring Mixins
+
+//Functions
+
+@function font_resizer($size) {
+  @return $size * 2; //using math operators
+}
+
+body {
+  @include body_width; //using mixins
+  font-family: 'Muli', sans-serif;
+  background: $theme_2;
+
+  //Styling of Global Buttons
+  button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 20px;
+    border: none;
+    background: $theme_8; //Use of SCSS variables
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  hr {
+  /*Global Horizontal line*/
+  color: $theme_7;
+  border-top-style: outset;
+  }
+
+  .theme_Or {
+    color: $theme_6;
+    cursor: pointer;
+  }
+}
+
+/**********************SCSS for Global components Ends**************************/

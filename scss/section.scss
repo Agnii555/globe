@@ -1,0 +1,372 @@
+/**********************SCSS for Main Section Begins**************************/
+
+.main-section {
+  padding: 70px 60px 0;
+
+  //Styling Breadcrumb Begins
+  .breadcrumb {
+    ul {
+      width: 27%;
+      font-size: font_resizer(7px); //calling font resizer function
+      padding: 40px 0;
+      margin: 0;
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+
+      li {
+        a {
+          text-decoration: none;
+          font-weight: 600;
+          color: $theme_5;
+        }
+        .prev_breadcrumb {
+          color: $theme_6;
+          font-weight: 500;
+
+          &::after {
+            content: "";
+            border: solid $theme_5;
+            margin-left: 7px;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  /*Styling Breadcrumb Ends*/
+
+  //Styling banner section begins
+  .stay_banner {
+    .stay_information {
+      display: flex;
+      justify-content: space-between;
+      .stay_sub_block {
+        p {
+          @include flex_box; //using mixins
+          margin: 0;
+          img {
+            width: 25px;
+          }
+        }
+        h2 {
+          margin: 0;
+        }
+        .stay_heading {
+          display: flex;
+          h2 {
+            font-size: font_resizer(15px); //calling font resizer function
+          }
+          sup {
+            @include flex_box; //using mixins
+            font-weight: 600;
+            font-size: 10px;
+            margin-left: 8px;
+            color: $theme_5;
+            img {
+              width: 40%;
+            }
+          }
+        }
+        .hotel_location {
+          font-size: 12px;
+          font-weight: 600;
+          color: $theme_5;
+          display: inline-flex;
+          align-items: center;
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+        .hotel_review {
+          font-size: 10px;
+          font-weight: 600;
+          color: $theme_5;
+          gap: 3px;
+          span {
+            b {
+              font-size: 13px;
+              padding: 3px 5px;
+              border: $global_border;
+              border-radius: 5px;
+            }
+          }
+          b {
+            margin-right: 0;
+            font-weight: bold;
+            color: $theme_1;
+          }
+        }
+        .stay_control_buttons {
+          @include flex_box; //using mixins
+          margin: 15px 0;
+          justify-content: space-evenly;
+          .share {
+            border: $global_border;
+            font-weight: 800;
+            background: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin: 0 10px 0 5px;
+          }
+          .favourites {
+            padding: 10px 12px;
+            margin: 0 5px;
+            @extend .share;
+          }
+        }
+        .theme_Or {
+          text-align: right;
+          font-weight: bolder;
+          font-size: 30px;
+          span {
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .stay_images {
+      /*Flex box CSS for Stay Images section*/
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 15px 0 60px 0;
+      width: 100%;
+      height: 550px;
+
+      img {
+        flex: 0 0 47.5%; /*Using Flex grow, fles shrink and flex basis*/
+      }
+      .border-element {
+        border-radius: 0 20px 0 0;
+      }
+
+      .border-element1 {
+        border-radius: 0 0 20px 0;
+      }
+    }
+
+    .view_photos {
+      float: right;
+      position: absolute;
+      bottom: -8%;
+      right: 7%;
+      cursor: pointer;
+    }
+  }
+  //Styling banner section Ends
+
+  //SCSS for Overview components Begins
+  .Overview {
+    margin: $page_border;
+    h3 {
+      @include heading;
+    }
+    .Overview_content {
+      color: $theme_5; //Use of SCSS variables
+      font-weight: 600;
+    }
+    .overview_main_block {
+      display: grid;
+      grid-template-columns: repeat(5, 10%);
+      grid-template-rows: repeat(1, 100%);
+      grid-column-gap: 10px;
+      .overview_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px;
+        border: $global_border;
+        border-radius: 10px;
+        flex-direction: column;
+        p {
+          color: $theme_5; //Use of SCSS variables
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+      }
+      .overview_block_main {
+        background: $theme_8; //Use of SCSS variables
+        h2 {
+          margin: 5px 0;
+        }
+        p {
+          color: $theme_1;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  //SCSS for Overview components Ends
+
+  //SCSS for Available rooms block Begins
+  .available_rooms {
+    margin: $page_border;
+    h3 {
+      @include heading;
+    }
+    .available_room_body {
+      .available_room_listing {
+        /*Use of grid layout for available room section*/
+        display: inline-grid;
+        grid-template-columns: 40px 960px 200px 170px;
+        align-items: center;
+        gap: 10px;
+        .available_rooms_price {
+          margin: 0;
+          font-size: 24px;
+          span {
+            font-size: 12px;
+          }
+        }
+        .available_rooms_content {
+          font-weight: bold;
+          color: $theme_5;
+          margin: 0;
+        }
+      }
+    }
+  }
+  // SCSS for Available rooms block Ends
+
+  //SCSS of location block Begins
+  .location {
+    margin: $page_border;
+    h3 {
+      @include heading;
+    }
+    .loaction_heading {
+      @include flex_box; //using mixins
+      justify-content: space-between;
+      font-size: 20px;
+    }
+    .location_body {
+      width: 100%;
+      border-radius: 20px;
+      margin: 15px 0;
+      .map {
+        width: 100%;
+        border-radius: 20px;
+        margin: 20px 0 0;
+        cursor: pointer;
+      }
+      .hotel_location {
+        font-size: 12px;
+        font-weight: 600;
+        color: $theme_5;
+        display: inline-flex;
+        align-items: center;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  //SCSS of location block Ends
+
+  //Styling of Amenities section Begins
+  .amenities {
+    margin: $page_border;
+    h3 {
+      @include heading;
+    }
+    .amenities-wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 260px;
+      width: 60%;
+      div {
+        @include flex_box; //using mixins
+        justify-content: flex-start;
+        gap: 5px;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+        p {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  // Styling of Amenities section Ends
+
+  // SCSS for Reviews section Begins
+  .reviews {
+    padding-bottom: 5%;
+    margin: $page_border;
+    h3 {
+      @include heading;
+    }
+    .reviews_heading {
+      @include flex_box; //using mixins
+      justify-content: space-between;
+      font-size: 20px;
+    }
+    .reviews_body {
+      .reviews_rating {
+        @include flex_box; //using mixins
+        font-size: 14px;
+        h2 {
+          margin: 5px;
+          font-size: 42px;
+        }
+        .reviews_rating_type {
+          p {
+            font-size: 19px;
+            margin: 5px;
+          }
+          .verified-rating {
+            color: $theme_5;
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
+      }
+      .review-wrapper {
+        display: flex;
+        justify-content: center;
+        p {
+          span {
+            color: $theme_5;
+            font-weight: bold;
+          }
+        }
+        .review_profile {
+          margin: 10px 10px 10px 0;
+        }
+      }
+    }
+    .review_count {
+      display: flex;
+      justify-content: center;
+      .next {
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 0;
+      }
+      .previous {
+        @extend .next;
+      }
+      p {
+        margin: 10px 40px;
+      }
+    }
+  }
+  //SCSS for Reviews section Ends
+}
+/**********************SCSS for Main Section Ends**************************/

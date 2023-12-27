@@ -1,0 +1,73 @@
+/*SCSS Subscribe Newsletter Begins*/
+
+//Implementation of for loop
+@for $i from 2 to 4 {
+    .subscribe_newsletter:nth-child(#{$i}) {
+        font-family: "Muli", sans-serif;
+        font-size: $i + 14px; //Implementation of math operators
+    }
+}
+
+.subscribe_newsletter {
+    border-radius: 20px;
+    background: url("/images/subscribe_background.png") #CDEAE1 no-repeat right;
+    width: 80%;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    h2 {
+        font-size: font_resizer(13px); //calling font resizer function
+        margin: 5px 0;
+        font-family: sans-serif;
+    }
+
+    p {
+        margin: 10px 0;
+
+        #sub_info {
+            color: $theme_5;
+            font-size: 15px;
+            font-weight: 600;
+        }
+          
+          #sub_travel {
+            font-size: 
+            font_resizer(9px); //calling font resizer function
+            margin-top: 20px;
+        }
+    }
+
+    form {
+        input {
+            border: none;
+            width: 33%;
+            padding: 16px;
+            border-radius: 5px;
+            outline: none;
+            &:focus-visible {
+                border: none;
+                width: 33%;
+                padding: 16px;
+                border-radius: 5px;
+                outline: none;
+            }
+            &::placeholder {
+                color: $theme_5;
+                font-size: 16px;
+            }
+        }
+
+        button {
+            padding: 15px;
+            background: $theme_1;
+            font-weight: 400;
+            color: $theme_4;
+            margin: 0 10px;
+        }
+    }
+  }
+  
+/*SCSS Subscribe Newsletter Begins*/

@@ -1,0 +1,33 @@
+  /* Footer SCSS begins*/
+  
+footer {
+  margin-top: 12%;
+  padding: 80px 60px;
+  background: $theme_8;
+  display: flex;
+  padding: 200px 0 60px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  ul {
+    @include footer_box;
+    li {
+      margin-bottom: 20px;
+    }
+  }
+  a {
+    @include footer_box;
+  }
+  p {
+    @include footer_box;
+  }
+  h4 {
+    @include footer_box;
+  }
+  .footer_listing {
+    img {
+      cursor: pointer;
+    }
+  }
+}
+  /* footer SCSS Ends*/

@@ -1,0 +1,54 @@
+/* SCSS for Header Begins*/
+
+header {
+  @include body_width; //using mixins
+  box-shadow: 0 0 10px 0 $theme_3;
+  background: $theme_4;
+  position: fixed;
+  z-index: 9;
+
+  nav {
+    @include flex_box;
+    justify-content: space-between;
+    padding: 0 60px;
+
+    /*Implementation of lists and loops*/
+    $list: "find", "globe", "profile";
+    @each $a in $list {
+      section.#{$a} a {
+        text-decoration: none;
+        color: $theme_1;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    section {
+      display: flex;
+    }
+
+    .header-selector {
+      justify-content: space-between;
+      gap: 20px;
+      .active {
+        border-bottom: 5px solid $theme_8;
+      }
+      .header-selections {
+        align-items: center;
+          padding: 13px 0;
+          &:active {
+            @extend .active;
+          }
+          &:hover {
+            @extend .active;
+          }
+        .favourite {
+          border-right: 2px solid $theme_1;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+  /* SCSS for Header Ends*/
