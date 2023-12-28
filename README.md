@@ -1,12 +1,13 @@
-# Assignment 4
-
-Converting all the CSS code to SCSS code using layout of Assignment 3 as per the below web page design.
+# Globe
+Globe, a responsive hotel booking website that allows users to search for hotels, view details, and make reservations.
 
 # Development
 
 Run `npm run sass-dev` command in the terminal for building the css and the built css will be available under dist/. This command also watches the changes and continously rebuilds the css.
 
 # Requirements
+
+Demonastration of UI development using HTML, CSS/SCSS and JavaScript.
 
 Implementated CSS positioning, Grid layout / Flexbox, and SCSS features like variables, mixins, inheritance, loops, functions, math operations, etc.
 
